@@ -34,6 +34,7 @@ var EmployeeView = function(employee) {
 	    }
 	    var contact = navigator.contacts.create();
 	    contact.name = {givenName: employee.firstName, familyName: employee.lastName};
+	    contact.photos = {"img/"+employee.firstName+"_"+employee.lastName+".jpg"};
 	    var phoneNumbers = [];
 	    phoneNumbers[0] = new ContactField('work', employee.officePhone, false);
 	    phoneNumbers[1] = new ContactField('mobile', employee.cellPhone, true); // preferred number
